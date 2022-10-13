@@ -12,9 +12,6 @@ function Menu({ menuItems, ...props }) {
     const menuList = menuItems
     .filter((item) => select ? item.type === select : item)
     .map((item) => <MenuItem key={item.id} item={item} updateOrder={props.updateOrder} />);
-    // const menuList = menuItems
-    // .filter((item) => select ? item.type === select : item)
-    // .map((item) => <MenuList key={item.id} item={item} updateOrder={props.updateOrder} />);
 
   return (
     <div>

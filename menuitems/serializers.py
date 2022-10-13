@@ -1,7 +1,7 @@
 from dataclasses import field
 from rest_framework import serializers
 
-from .models import Menuitem
+from .models import Menuitem, Order
 
 class MenuitemSerializer(serializers.ModelSerializer):
     class Meta:
@@ -9,7 +9,7 @@ class MenuitemSerializer(serializers.ModelSerializer):
         fields = ('id', 'name', 'description', 'price', 'type', 'image')
         
 
-# class ReviewSerializer(serializers.ModelSerializer):
-#     class Meta:
-#         model = Review
-#         fields = '__all__'
+class OrderSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = Order
+        fields = '__all__'

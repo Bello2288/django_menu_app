@@ -12,7 +12,7 @@ function MenuItem({ item, ...props }) {
             <Card.Text className="card-body">{item.description}</Card.Text>
           </Card.Body>
         </div> 
-          <Button className="order-btn" variant="primary" type="button" onClick={() => props.updateOrder(item )}>
+          <Button className="order-btn" variant="primary" type="button" onClick={() => props.updateOrder(item)}>
             Add to Order
           </Button>
       </Card>

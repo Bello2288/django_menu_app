@@ -2,7 +2,7 @@ from django.db import models
 
 # Create your models here.
 
-class Menuitem(models.Model):      #   Classes are the blue-print for a data base tables
+class Menuitem(models.Model):      
     name = models.CharField(max_length=255)
     description = models.CharField(max_length=255, null=True)
     price = models.CharField(max_length=255, null=True)
@@ -12,3 +12,11 @@ class Menuitem(models.Model):      #   Classes are the blue-print for a data bas
     def __str__(self):
         return self.name
         
+        
+class Order(models.Model):
+    name = models.TextField()
+    phone = models.TextField()
+    order = models.JSONField()
+
+    def __str__(self):
+        return self.name

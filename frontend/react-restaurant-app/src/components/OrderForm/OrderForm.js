@@ -27,7 +27,7 @@ function OrderForm({ order, addOrder, resetOrder }) {
     return total.toFixed(2);
   }
 
-  const handleSubmit = () => {
+  const handleSubmit = (e) => {
     addOrder(order, customer, phone);
     setCustomer("");
     setPhone("");
